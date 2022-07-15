@@ -1,0 +1,189 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    
+}
+
+body{
+    background-color: black;
+    font-family: "Kumbh Sans";
+}
+
+.main-container{
+    height: 26em;
+    width: 26em;
+    background-color: var(--DarkBlue);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2em;
+
+}
+
+
+
+.icon-container{
+    padding: 2.2em 2.2em;
+    padding-bottom: 1.6em;
+}
+
+.icon{
+    background-color: hsl(216, 12%, 23%);
+    border-radius: 50%;
+    padding: 0.9em;
+}
+
+.text-container{
+    padding: 0 2.2em;
+    
+}
+
+.heading{
+    color: white;
+    
+}
+
+.text{
+    color: var(--LightGrey);
+    line-height: 1.7em;
+    font-size: 0.96rem;
+    padding-top: 1em;
+  
+}
+
+.rating{
+    padding: 1.5em 2.2em;   
+}
+
+ul{
+    list-style: none;
+    color: var(--LightGrey);
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    background-color: hsl(216, 12%, 23%);
+    border-radius: 50%;
+    padding: 0.9em;  
+    height: 3.2em;
+    width: 3.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+li:hover{
+    color: white;
+    background-color: var(--LightGrey);
+    cursor: pointer;
+    
+}
+
+li.active{
+    color: white;
+    background-color: var(--Orange);
+    
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.submit{
+    border: none;
+    background-color: var(--Orange);
+    color: white;
+    padding: 1em 11em;
+    border-radius: 15em;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+}
+
+.submit:hover{
+    color: var(--Orange);
+    background-color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.main-submit-container.active{
+    display: none;
+}
+
+
+.thank-container{
+    height: 26em;
+    width: 26em;
+    text-align: center;
+    padding: 0 2.2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.thank-container.active {
+    
+   opacity: 1;
+   pointer-events: all;
+    animation: fade-in 100ms forwards;
+}
+
+
+.thank-img-cont{
+    padding-top: 3em;
+}
+
+.which-selected-text{
+    color: var(--Orange);
+    padding: 0.5em;
+   font-size: 1.1rem;
+}
+.which-selected{
+    background-color: hsl(216, 12%, 23%);
+    margin: 2em 4em;
+    margin-bottom: 1.4em;
+    border-radius: 4em;
+}
+
+.thank-header{
+    color: white;
+}
+
+.thank-p{
+    padding-top: 0.6em;
+    color: var(--LightGrey);
+    line-height: 1.7em;
+    font-size: 0.9rem;
+}
+
+/* fade in animation */
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
